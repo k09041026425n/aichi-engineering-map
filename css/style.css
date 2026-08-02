@@ -1,0 +1,73 @@
+/* ページ内リンクが固定ナビゲーションに隠れないようにする */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, "Yu Gothic", sans-serif;
+}
+
+/* Leaflet地図の表示サイズ */
+#map {
+  width: 100%;
+  height: 440px;
+  border: 1px solid #dee2e6;
+}
+
+/* Bootstrap標準カードを生かした控えめなデザイン */
+.card {
+  height: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.business-cell {
+  min-width: 300px;
+}
+
+.company-cell {
+  min-width: 220px;
+}
+
+/* 企業カード内のロゴサイズを統一する */
+.logo-box {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  max-width: 150px;
+  max-height: 52px;
+  object-fit: contain;
+}
+
+/* Leafletポップアップ内の小さいロゴ */
+.popup-logo {
+  max-width: 120px;
+  height: 40px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.company-popup {
+  min-width: 250px;
+  line-height: 1.45;
+}
+
+.company-popup h3 {
+  font-size: 1rem;
+  margin: 0.4rem 0;
+}
+
+.company-popup p {
+  margin-bottom: 0.3rem;
+}
+
+/* スマートフォンでは地図を少し低くする */
+@media (max-width: 576px) {
+  #map {
+    height: 340px;
+  }
+}
